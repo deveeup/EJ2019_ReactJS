@@ -1,23 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/app/node_modules
-/app/.pnp
-/app/.pnp.js
+/platziVideo/node_modules
+/platziVideo/.pnp
+/platziVideo/.pnp.js
 
 # testing
-/app//coverage
+/platziVideo//coverage
 
 # production
-/app/build
+/platziVideo/build
 
 # misc
-/app/.DS_Store
-/app/.env.local
-/app/.env.development.local
-/app/.env.test.local
-/app/.env.production.local
+/platziVideo/.DS_Store
+/platziVideo/.env.local
+/platziVideo/.env.development.local
+/platziVideo/.env.test.local
+/platziVideo/.env.production.local
 
-/app/npm-debug.log*
-/app/yarn-debug.log*
-/app/yarn-error.log*
+/platziVideo/npm-debug.log*
+/platziVideo/yarn-debug.log*
+/platziVideo/yarn-error.log*
