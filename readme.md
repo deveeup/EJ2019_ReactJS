@@ -40,3 +40,9 @@ Ciclo de vida de los componentes:
 
 #### Sass styles
 mini-css-extract-plugin: Nos va a permitir extraer el css del bundle resultante para poder crear un nuevo archivo de css.
+
+
+### Fake API.
+sudo npm i json-server -g
+ json-server fileName.json
+
