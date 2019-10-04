@@ -52,5 +52,14 @@ Esto surge debido a que la gente se complicaba un poco al momento de usar las cl
 Otro de los motivos era que se volvia un poco enredado ya que tocaba pasar el estado por todos los componentes. Ahora vamos a poder hacer llamados o ciclos de vida en el componente más lejano sin necesidad de estar transmitiendo entre cada uno de ellos la información.
 
 React Hooks solo está disponible a partir de la versión 16.8.
+
 useState: Lo vamos a utilizar para manejar el estado.
+
 useEffect: Vamos a hacer las transmisiones, lo que significa que vamos a poder hacer peticiones de alguna API o de algún evento que se tenga que transmitir en los componentes, asi como tambien estar escuchando algun cambio.
+
+useEffect: Recibe dos parametros, primero recibe la función donde se hace el fetch, y luego de ello reicbe como segundo parametro el cual se encarga de estar escuchando alguna propiedad que pueda cambiar y asi volver a ejecutarse.
+Si no le pasamos esta propiedad, se crea un loop infinito.
+
+
+### if 
+videos.mylist.length > 0 &&
