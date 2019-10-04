@@ -46,3 +46,11 @@ mini-css-extract-plugin: Nos va a permitir extraer el css del bundle resultante 
 sudo npm i json-server -g
  json-server fileName.json
 
+### React hooks
+Fue presentado en Octubre de 2018 en la ReactCONF en Las Vegas por Dan Abramov, quien nos contó y nos mostró como trabajar con esta implementación la cual no da estado y ciclo de vida de nuestros componentes de tipo función o mejor conocidos como states.
+Esto surge debido a que la gente se complicaba un poco al momento de usar las clases, lo que quiere decir que no sabian como inicializar un state, trabajar con el constructor o inicializar el building que estabamos trabajando.
+Otro de los motivos era que se volvia un poco enredado ya que tocaba pasar el estado por todos los componentes. Ahora vamos a poder hacer llamados o ciclos de vida en el componente más lejano sin necesidad de estar transmitiendo entre cada uno de ellos la información.
+
+React Hooks solo está disponible a partir de la versión 16.8.
+useState: Lo vamos a utilizar para manejar el estado.
+useEffect: Vamos a hacer las transmisiones, lo que significa que vamos a poder hacer peticiones de alguna API o de algún evento que se tenga que transmitir en los componentes, asi como tambien estar escuchando algun cambio.
