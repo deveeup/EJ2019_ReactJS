@@ -62,4 +62,7 @@ Si no le pasamos esta propiedad, se crea un loop infinito.
 
 
 ### if 
-videos.mylist.length > 0 &&
+{videos.mylist.length > 0 &&}
+
+### PropTypes
+Nos ofrece una manera dínamica de comprobar las propiedades que les pasamos a nuestros componentes, de esta manera sabemos si es un string, arreglo, booleano, número, función, etc.
