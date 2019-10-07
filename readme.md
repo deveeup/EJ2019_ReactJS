@@ -66,3 +66,14 @@ Si no le pasamos esta propiedad, se crea un loop infinito.
 
 ### PropTypes
 Nos ofrece una manera dínamica de comprobar las propiedades que les pasamos a nuestros componentes, de esta manera sabemos si es un string, arreglo, booleano, número, función, etc.
+
+
+### Install react-router-dom
+- npm i react-router-dom -D
+- Create file routes/App.js
+- import { BrowserRouter, Route } from 'react-router-dom'
+- export default const App = () => (
+  <BrowserRouter>
+    <Route exact path="/" component={Home}/>
+  </BrowserRouter>
+)

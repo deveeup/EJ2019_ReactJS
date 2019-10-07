@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 import '../assets/styles/App.scss';
 import initialState from '../hooks/useInitialState'
 
-const App = () => {
+const Home = () => {
   const data = initialState('http://localhost:3000/initialState');
   return (
     <div className="App">
@@ -36,4 +36,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default Home;
