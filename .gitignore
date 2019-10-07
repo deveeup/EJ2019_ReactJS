@@ -6,7 +6,7 @@
 /platziVideo/.pnp.js
 
 # testing
-/platziVideo//coverage
+/platziVideo/coverage
 
 # production
 /platziVideo/build
@@ -21,3 +21,9 @@
 /platziVideo/npm-debug.log*
 /platziVideo/yarn-debug.log*
 /platziVideo/yarn-error.log*
+
+#logs
+/platziVideo/debug.log
+
+#eslin
+/platziVideo/.eslintrc
