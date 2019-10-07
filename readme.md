@@ -77,3 +77,7 @@ Nos ofrece una manera dínamica de comprobar las propiedades que les pasamos a n
     <Route exact path="/" component={Home}/>
   </BrowserRouter>
 )
+- Para soportar multiples rutas es necesario agregar esto en webpack
+devServer: {
+  historyApiFallback: true,
+},
