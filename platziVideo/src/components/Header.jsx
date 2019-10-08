@@ -6,7 +6,6 @@ import gravatar from '../utils/gravatar';
 import '../assets/styles/components/Header.scss';
 import logo from '../assets/static/logo-platzi-video-BW2.png'
 import userProfile from '../assets/static/user-icon.png'
-import Login from '../containers/Login';
 const Header = props => {
   const { user } = props;
   const hasUser = Object.keys(user).length > 0;
@@ -25,8 +24,8 @@ const Header = props => {
         </div>
         <ul>
           {hasUser && <li><a href="/">{user.email}</a></li>}
-          {hasUser ? 
-            <li><Link to="#logout" onClick={handleLogout}>Cerrar Sesión</Link></li> : 
+          {hasUser ?
+            <li><Link to="#logout" onClick={handleLogout}>Cerrar Sesión</Link></li> :
             <li><Link to="/login">Iniciar Sesión</Link></li>
           }
         </ul>
