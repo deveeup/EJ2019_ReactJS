@@ -81,3 +81,23 @@ Nos ofrece una manera dínamica de comprobar las propiedades que les pasamos a n
 devServer: {
   historyApiFallback: true,
 },
+
+
+### Redux
+  Librería hecha en Javascript escrita por Dan Abrhamon, basada en la arquitectura flux propuesta por faceobok e inspirada en un lenguaje funcional. Redux se basa en 3 principios fundamentales:
+  1. Una sola fuente de la verdad
+  2. El estado es de solo lectura
+  3. Solo podemos utilizar funciones puras
+
+
+react redux nos da un provider el cual nos va a permitir encapsular nuestros componentes por medio de un connect, el cual va a tener toda la información del store transmitida a nuestros componentes. De esta forma nosotros vamos a poder extraer nuestro estado en toda la app y tener en todos los componentes la información necesaria.
+
+### export default con redux
+import { connect } from 'react-redux';
+export default connect(props, actions)(Component);
+
+Para actualizar el store es importante ubicar dos archivos:
+- actions/index.js
+- reducers/index.js
+
+En el action vamos a describir la información que vamos a hacer y pasar un objeto que vamos a tener disponible dentro de nuestro reducer, el cuál después va a tomar la acción que nosotros estamos ejecutando para evaluar como lo va a guardar dentro de nuestro estado.
