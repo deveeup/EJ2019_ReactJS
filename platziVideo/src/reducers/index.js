@@ -3,7 +3,6 @@ const reducer = (state, action) => {
     case 'SET_FAVORITE':
       const itemId = state.myList.find(items => items.id === action.payload.id)
       if(itemId) return state;
-
       return {
         ...state,
         myList: [...state.myList, action.payload]
@@ -16,22 +15,28 @@ const reducer = (state, action) => {
     case 'LOGIN_REQUEST':
       return {
         ...state,
-        user: action.payload
+        user: action.payload,
       }
     case 'LOGOUT_REQUEST':
       return {
         ...state,
-        user: action.payload
+        user: action.payload,
       }
     case 'REGISTER_REQUEST':
-        return {
-          ...state,
-          user: action.payload
-        }
-    default:
-        return state;
+      return {
+        ...state,
+        user: action.payload,
       }
-    }
-    
-export default reducer;
+    case 'GET_VIDEO_SOURCE':
+      return {
+        ...state,
+        playing: state.trends.find(item => item.id === Number(action.payload))
+        || state.original.find(item => item.id === Number(action.payload))
+        || []
+      }
+    default:
+      return state;
+  }
+}
 
+export default reducer;
