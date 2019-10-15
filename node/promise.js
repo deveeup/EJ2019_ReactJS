@@ -13,4 +13,3 @@ promise
   .then(msg => console.log("message", msg))
   .catch(err => console.log("error", err));
 
-  
