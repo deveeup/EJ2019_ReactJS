@@ -68,3 +68,12 @@ console.trace('hi): El trace nos indica la linea donde está ocurriendo...
 
 
 
+ExpressJS: Es un framework para crear aplicaicones web, web services e incluso web apis... Es free y opensource bajo la licencia MIT, fue inspirado ne un framework escrito en ruby llamado sinatra.
+
+Sus características son:
+- Liviano y minimalista
+- Template engine (pubc, mustach, handlebar)
+- Routing (podemos manejar expresiones regulares y así capturar parametros)
+- Middlewares (interceptan el request object y response object y llamar el middleware que sigue)
+- Plugins (que existen por variedades en la comunidad)
+

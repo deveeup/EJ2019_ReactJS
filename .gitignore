@@ -4,6 +4,9 @@
 /platziVideo/node_modules
 /platziVideo/.pnp
 /platziVideo/.pnp.js
+/movies-api/node_modules
+/movies-api/.pnp
+/movies-api/.pnp.js
 
 # testing
 /platziVideo//coverage
