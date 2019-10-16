@@ -49,3 +49,22 @@ Las funciones más comunes son pipe, read y push.
 Los Writable Streams tenemos el evento drame (que es cuando está emitiendo datos), el evento finish (que es cuando termina de emitir esos datos) y error (que funciona similar como en el Readable Streams)...
 
 
+
+El console.log por debajo trabaja con una utilidad llamada utils format...
+
+%s -> string
+%d -> número
+%j -> json
+
+console.info es un alias del console.log, no cambia para nada...
+En javascript de lado del cliente, si vemos utilidades de chrome, cuando hacemos console.info chrome le coloca un pequeño icono. Sin embargo en node es solo un alias...
+
+Lo mismo sucede con console.warn, este es un alias de error y en utilidades de chrome muestra un warn...
+
+console.assert(var1 === var2): assert se utiliza generalmente para evaluar booleanos.
+
+console.trace('hi): El trace nos indica la linea donde está ocurriendo...
+
+
+
+

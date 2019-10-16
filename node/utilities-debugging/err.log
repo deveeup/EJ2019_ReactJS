@@ -1,0 +1,6 @@
+Error: baiabaia
+    at Timeout.setInterval [as _onTimeout] (C:\xampp\htdocs\r\dv\EJ2019_ReactJS\node\utilities-debugging\console-class.js:10:21)
+    at ontimeout (timers.js:436:11)
+    at tryOnTimeout (timers.js:300:5)
+    at listOnTimeout (timers.js:263:5)
+    at Timer.processTimers (timers.js:223:10)
