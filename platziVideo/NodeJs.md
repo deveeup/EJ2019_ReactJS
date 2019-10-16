@@ -43,4 +43,9 @@ Esto hace que los streams sean poderosos debido a que podemos manejar gran canti
 
 
 
+Readable y Writable Streams: Tienen eventos y funciones, tienen eventos porque heredan de la clase event emitter, en los Readable Streams los eventos más comunes son data (que es cuando está recibiendo datos) y end que es cuando termina de recibir estos datos, también tiene un evento error que es cuando ocurre un error en este proceso de datos.
+Las funciones más comunes son pipe, read y push. 
+
+Los Writable Streams tenemos el evento drame (que es cuando está emitiendo datos), el evento finish (que es cuando termina de emitir esos datos) y error (que funciona similar como en el Readable Streams)...
+
 
