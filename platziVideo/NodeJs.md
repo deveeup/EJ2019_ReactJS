@@ -36,3 +36,11 @@ En Javascript tenemos el DOM, también tenemos CSSOM, fetch api, webstorage (ses
 EN nodejs tenemos una serie de modulos, como es el modulo http que nos permite crear servidores, modulo de sistema operativo (nos permite comunicarnos con el OS y tener información sobre él), modulo de utilidades (exclusivas para nodejs), debugger, strings (para manejar colecciones de datos), eventos (definir acciones y dispararlas más adelante), ecmascript modules, y la consola...
 
 
+El objeto request es un writable string, y los strings heredan de los event emitters por ende también tienen eventos.
+
+STREAMS: Son una colección de datos, tal como lo son los strings y cadenas de texto, solo que en vez de estar en su totalidad se van manejando pedazo por pedazo...
+Esto hace que los streams sean poderosos debido a que podemos manejar gran cantidad de datos...
+
+
+
+
