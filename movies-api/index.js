@@ -10,7 +10,7 @@ const moviesApi = require('./routes/movies')
 // app.get('/json', function(req, res){
 //   res.send({ hl: 'asdss' });
 // })
-
+app.use(express.json());
 moviesApi(app);
 
 

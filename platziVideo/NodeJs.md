@@ -72,8 +72,28 @@ ExpressJS: Es un framework para crear aplicaicones web, web services e incluso w
 
 Sus características son:
 - Liviano y minimalista
-- Template engine (pubc, mustach, handlebar)
+- Template engine (pug, mustach, handlebar)
 - Routing (podemos manejar expresiones regulares y así capturar parametros)
 - Middlewares (interceptan el request object y response object y llamar el middleware que sigue)
 - Plugins (que existen por variedades en la comunidad)
 
+
+
+Capa de servicios: 
+
+MVC se queda corta en aplicaciones modernas, por ello es importante implementar uan capa de servicios.
+
+Capa de servicios:
+- Controllers (middlewares, Routers) -> Se comunican con el API y devuelven JSON. Y los controladores no llaman a otros controladores, solo llaman servicios.
+
+- Services -> Corazon del app, aquí está toda la lógica de negocio. Los servicios pueden llamar otros servicios o pueden llamar librerías.
+
+- Librerias: Capa que está adjunta a librerías externas (BDD, Cloud DB, API's)
+
+La principal diferencia entre parametros y querys es que parametros son cuando están establecidos en la url, y query es cuando se le pone el ?nameQuery=YsePuedeConcatenar...
+
+La única responsabilidad de la ruta es saber como recibe parametros y como se los envia a los servicios, mientras que los servicios si saben que hacer con todos esos parametros y esos datos, y saben como devolver la información
+
+
+db_user_video
+BOQ2MKbkGuRqg74V
