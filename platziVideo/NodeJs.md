@@ -97,3 +97,15 @@ La única responsabilidad de la ruta es saber como recibe parametros y como se l
 
 db_user_video
 BOQ2MKbkGuRqg74V
+
+
+Test para endpoints: Su unica responsabilidad de test, es probar que le llegan los datos y que regresa los datos correspondientes.
+
+npm i -D mocha supertest sinon proxyquire
+
+mocha: nos ayuda a correr los test
+supertest: levanta un servidor temporal
+sinon: crea mocks para tests
+proxyquire inyecta los mocks cuando se requieren los paquetes
+
+
