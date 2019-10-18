@@ -113,3 +113,6 @@ TDD: Esta tecnica trata de primero crear los test y luego la funcionalidad.
 - Hay unos casos donde vale la pena usar TDD (ejm cuando se tiene claro la lógica de negocio), sino es claro no va a funcionar para nada.
 - Cuando tenemos un BUG escribimos un test que va a fallar y cuando corregimos el BUG el test va a ser éxitoso (de esta manera aseguramos que el bug no va a volver a suceder porque hay un test que lo impide)
 
+
+Middleware: Es una pieza de software que está en medio de otras dos, se le suele descrigir como software glub (pegamento de software), ya que ayuda a conectar otras piezas de software.
+
