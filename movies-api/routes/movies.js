@@ -25,7 +25,7 @@ function moviesApi(app){
       const movies = await moviesService.getMovie({movieId})
       res.status(200).json({
         data: movies,
-        message: 'movie retrived'
+        message: 'movie retrieved'
       })
     } catch(err){
       next(err)
