@@ -61,7 +61,7 @@
     "express": "4.17.1",
     "helmet": "3.18.0",
     "history": "^4.9.0",
-    "ignore-styles": "5.0.1",
+    "ignore-styles": "^5.0.1",
     "md5": "2.2.1",
     "prop-types": "15.7.2",
     "react": "16.8.6",
