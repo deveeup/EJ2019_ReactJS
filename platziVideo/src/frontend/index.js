@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, compose } from 'redux';
+import { Router } from 'react-router';
+import { createBrowserHistory } from 'history';
 import reducer from './reducers';
 import App from './routes/App';
-
 const initialState = {
   'user': {},
   'playing': {},
@@ -171,11 +172,15 @@ const initialState = {
   ],
 };
 
-const store = createStore(reducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION__ || compose;
+const store = createStore(reducer, initialState, composeEnhacers());
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={store}>
+  <Router history={history}>
     <App />
+  </Router>
   </Provider>,
   document.querySelector('#app'),
 );
