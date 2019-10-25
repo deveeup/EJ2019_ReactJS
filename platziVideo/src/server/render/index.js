@@ -1,6 +1,11 @@
 import getManifest from '../getManifest';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const ENV = process.env.NODE_ENV;
+const isProd = ENV === 'production';
 const files = getManifest();
-console.log(files);
+
 const render = (html, preloadedState) => {
   return (`
   <!DOCTYPE html>
@@ -10,7 +15,7 @@ const render = (html, preloadedState) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Document</title>
-      <link rel="stylesheet" href="${files['main.css']}" type="text/css" />
+      <link rel="stylesheet" href="${isProd ? files['main.css'] : './assets/app.css' }" type="text/css" />
       </head>
       <body>
       <div id="app">${html}</div>
@@ -20,8 +25,8 @@ const render = (html, preloadedState) => {
           '\\u003c'
         )}
       </script>
-      <script src="${files['main.js']}" type="text/javascript"></script>
-      <script src="${files['vendors.js']}" type="text/javascript"></script>
+      <script src="${isProd ? files['main.js'] : './assets/app.js'}" type="text/javascript"></script>
+      <script src="${isProd ? files['vendors.js'] : './assets/vendor.js'}" type="text/javascript"></script>
     </body>
     </html>
   `);
