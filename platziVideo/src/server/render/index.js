@@ -1,4 +1,4 @@
-const render = (html) => {
+const render = (html, preloadedState) => {
   return (`
   <!DOCTYPE html>
     <html lang="en">
@@ -11,6 +11,12 @@ const render = (html) => {
       </head>
       <body>
       <div id="app">${html}</div>
+      <script>
+        window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
+          /</g,
+          '\\u003c'
+        )}
+      </script>
       <script src="assets/app.js" typ="text/javascript"></script>
       <script src="assets/vendor.js" typ="text/javascript"></script>
     </body>

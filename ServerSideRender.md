@@ -7,3 +7,5 @@ StaticRouter from 'react'router': Debido a que react-router no tiene como tal un
 
 renderRoutes from 'react-router-config': Nos permite acceder a un metodo que se llama renderRoutes y ahí vamos a poder renderizar las rutas del staticRouter que estamos definiendo anteriormente.
 
+Hydrate: Hace un bind a los eventos y llama a todos los eventos necesarios que tenemos disponibles en el navegador, para que no tengamos que llamar dos veces el mismo contenido.
+
