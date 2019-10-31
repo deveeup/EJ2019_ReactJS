@@ -24,3 +24,7 @@
 /platziVideo/npm-debug.log*
 /platziVideo/yarn-debug.log*
 /platziVideo/yarn-error.log*
+
+
+#nodemodules
+node_modules
