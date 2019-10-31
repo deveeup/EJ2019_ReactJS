@@ -21,4 +21,3 @@ if(option == 'sign'){
 }else {
   console.log('options needs to be: sign or verify')
 }
-
