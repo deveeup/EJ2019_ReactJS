@@ -4,9 +4,9 @@ const session = require('express-session');
 const app = express();
 
 app.use(session({
-  resave: false,
-  saveUnitialized: false,
-  secret: 'this_is_the_secret!'
+  resave: false, //no se guardará la cookie cada vez que se haga un cambio
+  saveUnitialized: false, //por defecto si la cookie no se ha inicializado no la guardará por defecto.
+  secret: 'this_is_the_secret!' //para que la cookie se cifre con este secreet.
 }))
 
 app.get('/', (req, res) => {
