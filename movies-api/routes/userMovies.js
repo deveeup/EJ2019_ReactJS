@@ -12,7 +12,10 @@ function userMoviesApi(app) {
 
   const userMoviesService = new UserMoviesService();
 
-  router.get('/', validationHandler({ userId: userIdSchema }, 'query'), async function(req, res, next) {
+  router.get(
+    '/',
+    validationHandler({ userId: userIdSchema }, 'query'),
+    async function(req, res, next) {
       const { userId } = req.query;
       try {
         const userMovies = await userMoviesService.getUserMovies({ userId });
@@ -25,7 +28,12 @@ function userMoviesApi(app) {
       }
     }
   );
-  router.post('/', validationHandler(createUserMovieSchema), async function(req, res, next){
+
+  router.post('/', validationHandler(createUserMovieSchema), async function(
+    req,
+    res,
+    next
+  ) {
     const { body: userMovie } = req;
     try {
       const createdUserMovieId = await userMoviesService.createUserMovie({
@@ -34,25 +42,29 @@ function userMoviesApi(app) {
       res.status(201).json({
         data: createdUserMovieId,
         message: 'user movie created'
-      })
-    }catch(err){
-      next(err);
-    }
-  })
-  router.delete(':userMovieId', validationHandler({ userMovieId: movieIdSchema }, 'params'), async function(req, res, next){
-    const { userMovieId } = req.params;
-    try {
-      const deletedUserMovieId = await userMoviesService.deleteUserMovie({
-        userMovieId,
       });
-      res.status(200).json({
-        data: deletedUserMovieId,
-        message: 'user movie deleted',
-      })
-    } catch (err){
+    } catch (err) {
       next(err);
     }
-  })
+  });
+  router.delete(
+    '/:userMovieId',
+    validationHandler({ userMovieId: movieIdSchema }, 'params'),
+    async function(req, res, next) {
+      const { userMovieId } = req.params;
+      try {
+        const deletedUserMovieId = await userMoviesService.deleteUserMovie({
+          userMovieId
+        });
+        res.status(200).json({
+          data: deletedUserMovieId,
+          message: 'user movie deleted'
+        });
+      } catch (err) {
+        next(err);
+      }
+    }
+  );
 }
 
 module.exports = userMoviesApi;
